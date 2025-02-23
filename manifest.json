@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Line Reading",
+  "version": "1.0",
+  "description": "Speed up your Web reading with Line Reading.",
+  "permissions": [
+    "activeTab"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["images/cursor.png"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
